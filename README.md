@@ -23,6 +23,18 @@ yarn add frames.js
   yarn dev
   ```
 
+## ローカルでデバックするためのツールをセットアップする方法
+
+```bash
+npm install -g @frames.js/debugger
+```
+
+以下コマンドで起動できる [http://localhost:3010](http://localhost:3010)
+
+```bash
+frames
+```
+
 ### 参考文献
 
 1. [framejs - QuickStart](https://framesjs.org/#quickstart)

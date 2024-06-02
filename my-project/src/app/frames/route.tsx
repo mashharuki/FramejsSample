@@ -18,6 +18,16 @@ const handleRequest = frames(async (ctx) => {
       <Button action="post" target={{ query: { value: "No" } }}>
         Say No
       </Button>,
+      <Button
+        action="post"
+        target={{ pathname: "/route1", query: { foo: "bar" } }}
+      >
+        Go to route 1
+      </Button>,
+      // Without query params
+      <Button action="post" target="/route2">
+        Go to route 2
+      </Button>,
     ],
   };
 });
