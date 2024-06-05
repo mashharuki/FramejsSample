@@ -25,7 +25,8 @@ const handler = frames(async (ctx) => {
     // image: "https://picsum.photos/seed/frames.js/1146/600",
     image: (
       <div tw="flex flex-col">
-        <div tw="flex">{`The user's FID is ${ctx.message?.inputText}` || "Hello world"}</div>
+        <div tw="flex">{`The user's FID is ${ctx.message?.requesterFid}`}</div>
+        <div tw="flex">{`Your input is ${ctx.message?.inputText}`}</div>
         <div tw="flex">Counter {count}</div>
       </div>
     ),
