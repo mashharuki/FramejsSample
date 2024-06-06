@@ -2,6 +2,11 @@
 import { Button } from 'frames.js/next';
 import { frames } from "./frames";
  
+/**
+ * Handles the frame request and returns the frame data.
+ * @param {object} ctx - The context object containing the request data.
+ * @returns {object} - The frame data object.
+ */
 const handler = frames(async (ctx) => {
  
   const count = ctx.message

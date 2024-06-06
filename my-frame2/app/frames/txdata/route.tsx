@@ -4,6 +4,12 @@ import { optimismSepolia } from "viem/chains";
 import { frames } from "../frames";
 import { myTokenABI } from "./contracts/myToken";
  
+/**
+ * Handles the POST request for the route.
+ * @param {Context} ctx - The context object containing the request information.
+ * @returns {Promise<any>} - A promise that resolves to the transaction result.
+ * @throws {Error} - If the frame message is invalid.
+ */
 export const POST = frames(async (ctx) => {
   if (!ctx?.message) {
     throw new Error("Invalid frame message");
