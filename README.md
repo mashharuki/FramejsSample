@@ -2,6 +2,12 @@
 
 frame.js を学習するためのサンプルリポジトリです。
 
+## Limedemo
+
+[Vercel](https://framejs-sample.vercel.app/frames)
+
+[Wrapcast - https://warpcast.com/mashharuki/0xeb51feff](https://warpcast.com/mashharuki/0xeb51feff)
+
 ## プロジェクトの概要
 
 FramejsSample は、frame.js を学習するためのサンプルリポジトリです。このプロジェクトでは、frame.js のテンプレートプロジェクトの作り方や動かし方について説明しています。また、ローカルでデバッグするためのツールのセットアップ方法も提供しています。
