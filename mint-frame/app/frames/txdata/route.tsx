@@ -1,4 +1,4 @@
-import { CHAIN_ID } from "@/app/utils";
+import { CHAIN_ID, MYNFT_COONTRACT_ADDRESS } from "@/app/utils";
 import { transaction } from "frames.js/core";
 import { Abi, encodeFunctionData } from "viem";
 import { frames } from "../frames";
@@ -18,20 +18,17 @@ export const POST = frames(async (ctx) => {
   const userAddress = ctx.message.connectedAddress;
   console.log("userAddress", userAddress)
 
-  // create calldata
-  const calldata = encodeFunctionData({
-    abi: myNFTABI as Abi,
-    functionName: "mint",
-    args: [userAddress, 0, 1, "0x"] as const,
-  });
-
   return transaction({
     chainId: `eip155:${CHAIN_ID}`, // OP Sepolia
     method: "eth_sendTransaction", // sendTransaction
     params: {
       abi: myNFTABI as Abi,
-      to: userAddress as any,
-      data: calldata,
+      to: MYNFT_COONTRACT_ADDRESS,
+      data: encodeFunctionData({
+        abi: myNFTABI as Abi,
+        functionName: "mint",
+        args: [userAddress, 0, 1, "0x"] as const,
+      }),
       value: "0"
     },
   });

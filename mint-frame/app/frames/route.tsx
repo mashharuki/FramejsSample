@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { getTokenUrl } from 'frames.js';
 import { Button } from 'frames.js/next';
-import { CHAIN_ID, MYNFT_COONTRACT_ADDRESS } from '../utils';
 import { frames } from "./frames";
  
 /**
@@ -23,16 +21,6 @@ const handler = frames(async (ctx) => {
       <Button action="tx" target="/frames/txdata" post_url="/frames">
         Mint NFT
       </Button>,
-      <Button
-      action="mint"
-        target={getTokenUrl({
-          address: MYNFT_COONTRACT_ADDRESS,
-          chainId: CHAIN_ID,
-          tokenId: "1",
-        })}
-      >
-        Mint
-      </Button>
     ]
   };
 });
