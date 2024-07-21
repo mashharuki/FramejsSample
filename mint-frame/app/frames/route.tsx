@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { Button } from 'frames.js/next';
+import { LOGO_URL, OPENSEA_URL, UNCHAIN_PAGE_URL } from '../utils';
 import { frames } from "./frames";
  
 /**
@@ -13,14 +14,17 @@ const handler = frames(async (ctx) => {
   }
  
   return {
-    image: "https://bafybeib5qpd75kzjzkk4iko5ul72lm2yxhkdximeutfafkw3x2jqotfldi.ipfs.w3s.link/UNCHAIN_logo.png",
+    image: LOGO_URL,
     buttons: [
-      <Button action="link" target={`https://testnets.opensea.io/collection/unidentified-contract-fe1625d2-95bf-4cff-bc65-756c`}>
+      <Button action="link" target={OPENSEA_URL}>
         View NFT
       </Button>,
       <Button action="tx" target="/frames/txdata" post_url="/frames">
-        Mint NFT
+        Mint
       </Button>,
+      <Button action="link" target={UNCHAIN_PAGE_URL}>
+        UNCHAIN Page
+      </Button>
     ]
   };
 });

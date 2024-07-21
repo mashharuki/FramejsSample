@@ -19,7 +19,7 @@ export const POST = frames(async (ctx) => {
   console.log("userAddress", userAddress)
 
   return transaction({
-    chainId: `eip155:${CHAIN_ID}`, // OP Sepolia
+    chainId: `eip155:${CHAIN_ID}`, // Base Sepolia
     method: "eth_sendTransaction", // sendTransaction
     params: {
       abi: myNFTABI as Abi,
